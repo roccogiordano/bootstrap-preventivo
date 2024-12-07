@@ -16,7 +16,7 @@
     <header>
         <!-- Interactive Navbar -->
         <nav class="navbar navbar-expand-sm bg-dark" data-bs-theme="dark">
-            <div class="container-fluid mx-sm-5">
+            <div class="container-fluid px-sm-5">
                 <a class="navbar-brand" href="#">
                     <span>Bool Factory</span>
                 </a>
@@ -41,6 +41,67 @@
         </nav>
         <!-- /Interactive Navbar -->
     </header>
+
+    <main>
+        <div class="container-fluid mt-4 px-md-5">
+            <!-- Title and Form -->
+            <div class="col-sm-8">
+                <div class="container-fluid px-0">
+                    <h1 class="fs-3">Richiesta Preventivo</h1>
+                    <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
+                </div>
+
+                <form class="row gy-3" id="getQuote">
+                    <div class="col-12">
+                        <label for="inputNome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="inputNome" placeholder="Inserisci il tuo nome">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputCognome" class="form-label">Cognome</label>
+                        <input type="text" class="form-control" id="inputCognome"
+                            placeholder="Inserisci il tuo cognome">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputEmail" class="form-label">E-mail</label>
+                        <input type="text" class="form-control" id="inputEmail"
+                            placeholder="Inserisci il tuo indirizzo e-mail">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputType" class="form-label">Tipo di Lavoro</label>
+                        <select class="form-select" aria-label="Genere" id="inputTipo">
+                            <option selected>Seleziona il tipo di lavoro</option>
+                            <option value="Front-end Development">Front-end Development</option>
+                            <option value="Back-end Development">Back-end Development</option>
+                            <option value="Project Analysis">Project Analysis</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <label for="inputNotes" class="form-label">Note</label>
+                        <textarea class="form-control" id="inputNote" rows="3"
+                            placeholder="Inserisci eventuali note"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <label for="inputDiscountCode" class="form-label">Codice Promozionale (opzionale)</label>
+                        <input type="text" class="form-control" id="inputDiscountCode"
+                            placeholder="Inserisci un codice promozionale">
+                    </div>
+                    <div class="form-check col-12 mb-0 ps-1">
+                        <input class="form-check-input mx-2 ps-0" type="checkbox" value="" id="inputPrivacy">
+                        <label class="form-check-label" for="inputPrivacy">Accetto la Privacy Policy</label>
+                    </div>
+                    <div class="col-12 d-flex justify-content-around">
+                        <button class="col-4 bg-primary text-white border-0 rounded my-3" type="submit"
+                            id="getQuoteButton">Calcola Preventivo</button>
+                        <div class="col-4">
+                            <h6 class="fw-bold text-center my-2">Prezzo finale</h6>
+                            <p class="fs-4 text-center mb-0">200,00</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /Title and Form -->
+        </div>
+    </main>
 
     <!-- JS Link -->
     <script src="./main.js"></script>
