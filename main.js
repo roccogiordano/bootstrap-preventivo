@@ -39,7 +39,7 @@ let price;
 
 // addEventListener Method
 
-getQuoteForm.addEventListener("submit", function(event) {
+getQuoteForm.addEventListener("submit", function (event) {
 
 
     // preventDefault Function
@@ -81,6 +81,26 @@ getQuoteForm.addEventListener("submit", function(event) {
     priceDisplay2.innerText = `${price}\u20AC`;
 
     //
+
+
+    // Fields Reset
+
+    inputFName.value = "";
+
+    inputLName.value = "";
+
+    inputEmail.value = "";
+
+    inputType.selectedIndex = 0;
+
+    inputNotes.value = "";
+
+    inputDiscount.value = "";
+
+    inputPrivacy.checked = false;
+
+    //
+
 
 
 });
