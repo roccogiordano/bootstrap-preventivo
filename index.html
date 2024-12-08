@@ -51,14 +51,14 @@
                     <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
                 </div>
 
-                <form class="row gy-3" id="getQuote">
+                <form class="row gy-3" id="getQuoteForm">
                     <div class="col-12">
-                        <label for="inputFirstName" class="form-label">Nome</label>
-                        <input type="text" class="form-control" required id="inputFirstName" placeholder="Inserisci il tuo nome">
+                        <label for="inputFName" class="form-label">Nome</label>
+                        <input type="text" class="form-control" required id="inputFName" placeholder="Inserisci il tuo nome">
                     </div>
                     <div class="col-12">
-                        <label for="inputLastName" class="form-label">Cognome</label>
-                        <input type="text" class="form-control" required id="inputLastNaame"
+                        <label for="inputLName" class="form-label">Cognome</label>
+                        <input type="text" class="form-control" required id="inputLName"
                             placeholder="Inserisci il tuo cognome">
                     </div>
                     <div class="col-12">
@@ -77,12 +77,12 @@
                     </div>
                     <div class="col-12">
                         <label for="inputNotes" class="form-label">Note</label>
-                        <textarea class="form-control" required id="inputNotes" rows="3"
+                        <textarea class="form-control" id="inputNotes" rows="3"
                             placeholder="Inserisci eventuali note"></textarea>
                     </div>
                     <div class="col-12">
                         <label for="inputDiscount" class="form-label">Codice Promozionale (opzionale)</label>
-                        <input type="text" class="form-control" required id="inputDiscount"
+                        <input type="text" class="form-control" id="inputDiscount"
                             placeholder="Inserisci un codice promozionale">
                     </div>
                     <div class="form-check col-12 mb-0 ps-1">
@@ -93,8 +93,8 @@
                         <button class="col-4 bg-primary text-white border-0 rounded my-3 py-1" type="submit"
                             id="getQuoteButton">Calcola Preventivo</button>
                         <div class="col-4">
-                            <h6 class="fw-bold text-center my-2">Prezzo finale</h6>
-                            <p class="fs-4 text-center mb-0">200,00</p>
+                            <h6 class="fw-bold text-center my-2 d-none" id="priceDisplay1">Prezzo finale</h6>
+                            <p class="fs-4 text-center mb-0 d-none" id="priceDisplay2"></p>
                         </div>
                     </div>
                 </form>
