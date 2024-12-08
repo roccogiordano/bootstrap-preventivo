@@ -53,95 +53,103 @@ getQuoteForm.addEventListener("submit", function (event) {
     //
 
 
-    // Price Calculator
+    // Form Validation
 
-    if (inputTypeValue === 1) {
+    if (isNaN(inputFName.value) && inputFName.value.length > 1 && isNaN(inputLName.value) && inputLName.value.length > 1 && inputEmail.value.includes("@") && inputEmail.value.length > 1 && inputTypeValue > 0 && inputPrivacy.checked) {
 
-        price = hoursNum * frontendPrice;
 
-    } else if (inputTypeValue === 2) {
+        // Price Calculator
 
-        price = hoursNum * backendPrice;
+        if (inputTypeValue === 1) {
 
-    } else if (inputTypeValue === 3) {
+            price = hoursNum * frontendPrice;
 
-        price = hoursNum * analysisPrice;
+        } else if (inputTypeValue === 2) {
+
+            price = hoursNum * backendPrice;
+
+        } else if (inputTypeValue === 3) {
+
+            price = hoursNum * analysisPrice;
+
+        }
+
+        //
+
+
+        // Discount Calculator
+
+        switch (inputDiscountValue) {
+
+            case "":
+                price = price;
+                break;
+
+            case "YHDNU32":
+                price = price * 0.75;
+                break;
+
+            case "JANJC63":
+                price = price * 0.75;
+                break;
+
+            case "PWKCN25":
+                price = price * 0.75;
+                break;
+
+            case "SJDPO96":
+                price = price * 0.75;
+                break;
+
+            case "POCIE24":
+                price = price * 0.75;
+                break;
+
+            default:
+                alert("Il codice sconto inserito non è valido");
+                break;
+
+        }
+
+        //
+
+
+        // Price Output & DOM Manipulation
+
+        priceDisplay1.classList.remove("d-none");
+
+        priceDisplay2.classList.remove("d-none");
+
+        priceDisplay2.innerText = `${price.toFixed(2)}\u20AC`;
+
+        //
+
+
+        // Fields Reset
+
+        inputFName.value = "";
+
+        inputLName.value = "";
+
+        inputEmail.value = "";
+
+        inputType.selectedIndex = 0;
+
+        inputNotes.value = "";
+
+        inputDiscount.value = "";
+
+        inputPrivacy.checked = false;
+
+        //
+
+    } else {
+
+        alert("Inserisci dei dati validi.")
 
     }
-
-    //
-
-
-    // Discount Calculator
-
-    switch (inputDiscountValue) {
-
-        case "":
-            price = price;
-            break;
-
-        case "YHDNU32":
-            price = price * 0.75;
-            break;
-
-        case "JANJC63":
-            price = price * 0.75;
-            break;
-
-        case "PWKCN25":
-            price = price * 0.75;
-            break;
-
-        case "SJDPO96":
-            price = price * 0.75;
-            break;
-
-        case "POCIE24":
-            price = price * 0.75;
-            break;
-
-        default:
-            alert("Il codice sconto inserito non è valido");
-            break;
-
-    }
-
-    //
-
-
-    // Price Output & DOM Manipulation
-
-    priceDisplay1.classList.remove("d-none");
-
-    priceDisplay2.classList.remove("d-none");
-
-    priceDisplay2.innerText = `${price.toFixed(2)}\u20AC`;
-
-    //
-
-
-    // Fields Reset
-
-    inputFName.value = "";
-
-    inputLName.value = "";
-
-    inputEmail.value = "";
-
-    inputType.selectedIndex = 0;
-
-    inputNotes.value = "";
-
-    inputDiscount.value = "";
-
-    inputPrivacy.checked = false;
-
-    //
-
 
 
 });
 
 //
-
-console.log(hoursNum, frontendPrice, backendPrice, analysisPrice, getQuoteForm, inputFName, inputLName, inputEmail, inputType, inputNotes, inputDiscount, inputPrivacy, priceDisplay1, priceDisplay2, inputTypeValue, inputDiscountValue, price);
