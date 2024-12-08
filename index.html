@@ -53,22 +53,22 @@
 
                 <form class="row gy-3" id="getQuote">
                     <div class="col-12">
-                        <label for="inputNome" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="inputNome" placeholder="Inserisci il tuo nome">
+                        <label for="inputFirstName" class="form-label">Nome</label>
+                        <input type="text" class="form-control" required id="inputFirstName" placeholder="Inserisci il tuo nome">
                     </div>
                     <div class="col-12">
-                        <label for="inputCognome" class="form-label">Cognome</label>
-                        <input type="text" class="form-control" id="inputCognome"
+                        <label for="inputLastName" class="form-label">Cognome</label>
+                        <input type="text" class="form-control" required id="inputLastNaame"
                             placeholder="Inserisci il tuo cognome">
                     </div>
                     <div class="col-12">
                         <label for="inputEmail" class="form-label">E-mail</label>
-                        <input type="text" class="form-control" id="inputEmail"
+                        <input type="text" class="form-control" required id="inputEmail"
                             placeholder="Inserisci il tuo indirizzo e-mail">
                     </div>
                     <div class="col-12">
                         <label for="inputType" class="form-label">Tipo di Lavoro</label>
-                        <select class="form-select" aria-label="Genere" id="inputTipo">
+                        <select class="form-select" required aria-label="Genere" id="inputType">
                             <option selected>Seleziona il tipo di lavoro</option>
                             <option value="Front-end Development">Front-end Development</option>
                             <option value="Back-end Development">Back-end Development</option>
@@ -77,16 +77,16 @@
                     </div>
                     <div class="col-12">
                         <label for="inputNotes" class="form-label">Note</label>
-                        <textarea class="form-control" id="inputNote" rows="3"
+                        <textarea class="form-control" required id="inputNotes" rows="3"
                             placeholder="Inserisci eventuali note"></textarea>
                     </div>
                     <div class="col-12">
                         <label for="inputDiscount" class="form-label">Codice Promozionale (opzionale)</label>
-                        <input type="text" class="form-control" id="inputDiscount"
+                        <input type="text" class="form-control" required id="inputDiscount"
                             placeholder="Inserisci un codice promozionale">
                     </div>
                     <div class="form-check col-12 mb-0 ps-1">
-                        <input class="form-check-input mx-2 ps-0" type="checkbox" value="" id="inputPrivacy">
+                        <input class="form-check-input mx-2 ps-0" required type="checkbox" value="" id="inputPrivacy">
                         <label class="form-check-label" for="inputPrivacy">Accetto la Privacy Policy</label>
                     </div>
                     <div class="col-12 d-flex flex-column flex-sm-row align-items-center justify-content-sm-around">
