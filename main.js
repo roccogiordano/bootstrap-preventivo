@@ -72,6 +72,43 @@ getQuoteForm.addEventListener("submit", function (event) {
     //
 
 
+    // Discount Calculator
+
+    switch (inputDiscountValue) {
+
+        case "":
+            price = price;
+            break;
+
+        case "YHDNU32":
+            price = price * 0.75;
+            break;
+
+        case "JANJC63":
+            price = price * 0.75;
+            break;
+
+        case "PWKCN25":
+            price = price * 0.75;
+            break;
+
+        case "SJDPO96":
+            price = price * 0.75;
+            break;
+
+        case "POCIE24":
+            price = price * 0.75;
+            break;
+
+        default:
+            alert("Il codice sconto inserito non è valido");
+            break;
+
+    }
+
+    //
+
+
     // Price Output & DOM Manipulation
 
     priceDisplay1.classList.remove("d-none");
