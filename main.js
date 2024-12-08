@@ -53,6 +53,25 @@ getQuoteForm.addEventListener("submit", function(event) {
     //
 
 
+    // Price Calculator
+
+    if (inputTypeValue === 1) {
+
+        price = hoursNum * frontendPrice;
+
+    } else if (inputTypeValue === 2) {
+
+        price = hoursNum * backendPrice;
+
+    } else if (inputTypeValue === 3) {
+
+        price = hoursNum * analysisPrice;
+
+    }
+
+    //
+
+
 });
 
 //
