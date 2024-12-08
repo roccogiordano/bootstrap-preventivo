@@ -72,6 +72,17 @@ getQuoteForm.addEventListener("submit", function(event) {
     //
 
 
+    // Price Output & DOM Manipulation
+
+    priceDisplay1.classList.remove("d-none");
+
+    priceDisplay2.classList.remove("d-none");
+
+    priceDisplay2.innerText = `${price}\u20AC`;
+
+    //
+
+
 });
 
 //
