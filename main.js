@@ -34,6 +34,22 @@ let inputDiscountValue;
 
 let price;
 
+const commissionables = ["Front-end Development", "Back-end Development", "Project Analysis"]
+
+//
+
+
+// Select Options Generation
+
+for (let i = 0; i < commissionables.length; i++) {
+
+    let commissionable = document.createElement("option");
+    commissionable.value = commissionables[i];
+    commissionable.text = commissionables[i];
+    inputType.appendChild(commissionable);
+
+}
+
 //
 
 
@@ -46,7 +62,7 @@ getQuoteForm.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
-    inputTypeValue = inputType.selectedIndex;
+    inputTypeValue = inputType.value;
 
     inputDiscountValue = inputDiscount.value;
 
@@ -55,20 +71,20 @@ getQuoteForm.addEventListener("submit", function (event) {
 
     // Form Validation
 
-    if (isNaN(inputFName.value) && inputFName.value.length > 1 && isNaN(inputLName.value) && inputLName.value.length > 1 && inputEmail.value.includes("@") && inputEmail.value.length > 1 && inputTypeValue > 0 && inputPrivacy.checked) {
+    if (isNaN(inputFName.value) && inputFName.value.length > 1 && isNaN(inputLName.value) && inputLName.value.length > 1 && inputEmail.value.includes("@") && inputEmail.value.length > 1 && inputType.selectedIndex > 0 && inputPrivacy.checked) {
 
 
         // Price Calculator
 
-        if (inputTypeValue === 1) {
+        if (inputTypeValue === "Front-end Development") {
 
             price = hoursNum * frontendPrice;
 
-        } else if (inputTypeValue === 2) {
+        } else if (inputTypeValue === "Back-end Development") {
 
             price = hoursNum * backendPrice;
 
-        } else if (inputTypeValue === 3) {
+        } else if (inputTypeValue === "Project Analysis") {
 
             price = hoursNum * analysisPrice;
 
