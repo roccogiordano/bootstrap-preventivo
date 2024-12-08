@@ -115,7 +115,7 @@ getQuoteForm.addEventListener("submit", function (event) {
 
     priceDisplay2.classList.remove("d-none");
 
-    priceDisplay2.innerText = `${price}\u20AC`;
+    priceDisplay2.innerText = `${price.toFixed(2)}\u20AC`;
 
     //
 
