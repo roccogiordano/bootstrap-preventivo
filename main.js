@@ -36,4 +36,25 @@ let price;
 
 //
 
-console.log(hoursNum, frontendPrice, backendPrice, analysisPrice, getQuoteForm, inputFName, inputLName, inputEmail, inputType, inputNotes, inputPrivacy, priceDisplay1, priceDisplay2, inputTypeValue, inputDiscountValue, price);
+
+// addEventListener Method
+
+getQuoteForm.addEventListener("submit", function(event) {
+
+
+    // preventDefault Function
+
+    event.preventDefault();
+
+    inputTypeValue = inputType.selectedIndex;
+
+    inputDiscountValue = inputDiscount.value;
+
+    //
+
+
+});
+
+//
+
+console.log(hoursNum, frontendPrice, backendPrice, analysisPrice, getQuoteForm, inputFName, inputLName, inputEmail, inputType, inputNotes, inputDiscount, inputPrivacy, priceDisplay1, priceDisplay2, inputTypeValue, inputDiscountValue, price);
