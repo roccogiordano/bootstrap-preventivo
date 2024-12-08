@@ -106,7 +106,8 @@ getQuoteForm.addEventListener("submit", function (event) {
                 break;
 
             default:
-                alert("Il codice sconto inserito non è valido");
+                alert("Il codice sconto inserito non è valido.\nIl prezzo è stato calcolato senza applicare sconti.");
+                price = price;
                 break;
 
         }
